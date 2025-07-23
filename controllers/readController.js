@@ -5,7 +5,6 @@ exports.findDocuments = async (req, res) => {
     const db = getDB();
     const collection = db.collection(req.params.collection);
     
-    // Параметри з запиту
     const filter = req.query.filter ? JSON.parse(req.query.filter) : {};
     const projection = req.query.projection ? JSON.parse(req.query.projection) : {};
     const sort = req.query.sort ? JSON.parse(req.query.sort) : {};
